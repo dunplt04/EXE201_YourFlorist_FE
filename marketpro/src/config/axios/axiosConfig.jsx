@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "https://custom-florist.onrender.com/custom-florist/api/v1";
+const API_BASE_URL = "https://flourist-gkf7c9aefxcxb4ck.eastasia-01.azurewebsites.net/custom-florist/api/v1";
 
 export const api = axios.create({
   baseURL: API_BASE_URL,
