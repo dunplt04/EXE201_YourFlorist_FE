@@ -69,3 +69,23 @@ export const getDetailUser = async (id) => {
     throw error;
   }
 };
+
+export const getUserProfile = async () => {
+  try {
+    const response = await api.get('/users/me');
+    return response.data;
+  } catch (error) {
+    console.error('Get user profile error:', error);
+    throw error;
+  }
+};
+
+export const updateUserProfile = async (profileData) => {
+  try {
+    const response = await api.put('/users/me', profileData);
+    return response.data;
+  } catch (error) {
+    console.error('Update user profile error:', error);
+    throw error;
+  }
+};
