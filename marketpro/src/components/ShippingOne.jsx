@@ -9,7 +9,7 @@ const ShippingOne = () => {
             <div className="container container-lg">
                 <div className="row gy-4">
                     <div className="col-xxl-3 col-sm-6">
-                        <div className="shipping-item flex-align gap-16 rounded-16 bg-main-50 hover-bg-main-100 transition-2">
+                        <div className="shipping-item flex-align gap-16 rounded-16 bg-main-50 hover-bg-main-100 transition-2" style={{ minHeight: '200px' }}>
                             <span className="w-56 h-56 flex-center rounded-circle bg-main-600 text-white text-32 flex-shrink-0">
                                 <i className="ph-fill ph-car-profile" />
                             </span>
@@ -22,7 +22,7 @@ const ShippingOne = () => {
                         </div>
                     </div>
                     <div className="col-xxl-3 col-sm-6">
-                        <div className="shipping-item flex-align gap-16 rounded-16 bg-main-50 hover-bg-main-100 transition-2">
+                        <div className="shipping-item flex-align gap-16 rounded-16 bg-main-50 hover-bg-main-100 transition-2" style={{ minHeight: '200px' }}>
                             <span className="w-56 h-56 flex-center rounded-circle bg-main-600 text-white text-32 flex-shrink-0">
                                 <i className="ph-fill ph-hand-heart" />
                             </span>
@@ -35,7 +35,7 @@ const ShippingOne = () => {
                         </div>
                     </div>
                     <div className="col-xxl-3 col-sm-6">
-                        <div className="shipping-item flex-align gap-16 rounded-16 bg-main-50 hover-bg-main-100 transition-2">
+                        <div className="shipping-item flex-align gap-16 rounded-16 bg-main-50 hover-bg-main-100 transition-2" style={{ minHeight: '200px' }}>
                             <span className="w-56 h-56 flex-center rounded-circle bg-main-600 text-white text-32 flex-shrink-0">
                                 <i className="ph-fill ph-credit-card" />
                             </span>
@@ -47,7 +47,7 @@ const ShippingOne = () => {
                         </div>
                     </div>
                     <div className="col-xxl-3 col-sm-6">
-                        <div className="shipping-item flex-align gap-16 rounded-16 bg-main-50 hover-bg-main-100 transition-2">
+                        <div className="shipping-item flex-align gap-16 rounded-16 bg-main-50 hover-bg-main-100 transition-2" style={{ minHeight: '200px' }}>
                             <span className="w-56 h-56 flex-center rounded-circle bg-main-600 text-white text-32 flex-shrink-0">
                                 <i className="ph-fill ph-chats" />
                             </span>

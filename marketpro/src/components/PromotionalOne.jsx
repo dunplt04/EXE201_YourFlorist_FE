@@ -10,13 +10,14 @@ const promotions = [
 
 const PromotionalItem = ({ img, title }) => (
     <div className="col-xl-3 col-sm-6 col-xs-6">
-        <div className="promotional-banner-item position-relative rounded-24 overflow-hidden z-1">
+        <div className="promotional-banner-item position-relative rounded-24 overflow-hidden z-1" style={{ aspectRatio: '4/3', height: '100%' }}>
             <img 
                 src={img} 
                 alt={title} 
                 className="position-absolute inset-block-start-0 inset-inline-start-0 w-100 h-100 object-fit-cover z-n1" 
+                style={{ objectFit: 'cover', width: '100%', height: '100%' }}
             />
-            <div className="promotional-banner-item__content">
+            <div className="promotional-banner-item__content d-flex flex-column justify-content-center align-items-start h-100 w-100" style={{ position: 'relative', zIndex: 2 }}>
                 <h6 
                     style={{
                         color: 'white', 
@@ -26,14 +27,15 @@ const PromotionalItem = ({ img, title }) => (
                         backgroundColor: 'rgba(0, 0, 0, 0.5)',
                         padding: '5px 10px',
                         borderRadius: '5px',
-                        display: 'inline-block'
+                        display: 'inline-block',
+                        marginBottom: '16px'
                     }} 
                     className="promotional-banner-item__title"
                 >
                     {title}
                 </h6>
-                <Link to="/shop" className="btn btn-main d-inline-flex align-items-center rounded-pill gap-8 mt-24">
-                    Mưa sắm ngay!
+                <Link to="/shop" className="btn btn-main d-inline-flex align-items-center rounded-pill gap-8">
+                    Mua sắm ngay!
                     <span className="icon text-xl d-flex">
                         <i className="ph ph-arrow-right" />
                     </span>
