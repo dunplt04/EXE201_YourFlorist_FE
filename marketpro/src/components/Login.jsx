@@ -26,6 +26,7 @@ const Login = () => {
     });
 
     const [passwordError, setPasswordError] = useState("");
+    const [fade, setFade] = useState(false);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -86,11 +87,19 @@ const Login = () => {
         }
     };
 
+    const handleRegisterClick = (e) => {
+        e.preventDefault();
+        setFade(true);
+        setTimeout(() => {
+            navigate('/register');
+        }, 300); // 300ms for fade-out
+    };
+
     return (
-        <section className={style.container}>
+        <section className={style.container + (fade ? ' fade-out' : '')}>
             <ToastContainer />
             <div className={style.formContainer}>
-                <div className="row gy-4">
+                <div className="row gy-4 justify-content-center">
                     {/* Form Đăng Nhập */}
                     <form className="col-xl-6 pe-xl-5" onSubmit={handleSubmit}>
                         <div className={`${style.card} h-100`}>
@@ -106,51 +115,13 @@ const Login = () => {
                                 <input type="password" className={style.input} name="password" placeholder="Nhập mật khẩu" onChange={handleChange} />
                             </div>
                             <button type="submit" className={style.button}>Đăng nhập</button>
-                            {/* <button className="btn border w-100 d-flex align-items-center justify-content-center shadow-md mt-3"
-                                onClick={handleGoogleLogin}>
-                                <img src="/assets/images/logo/Logo_google.jpg" alt="Google Logo" style={{ height: '24px', marginRight: '10px' }} />
-                                <span>Đăng nhập với Google</span>
-                            </button> */}
-                            {/* <div className="mt-48">
-                                <Link to="#" className="text-danger-600 text-sm fw-semibold hover-text-decoration-underline">Quên mật khẩu?</Link>
-                            </div> */}
                         </div>
                     </form>
-
-                    {/* Form Đăng Ký */}
-                    <form className="col-xl-6" onSubmit={handleSubmitSignin}>
-                        <div className={style.card}>
-                            <h6 className="text-xl mb-32">Đăng Ký</h6>
-                            <input type="text" className={style.input} name="name" placeholder="Tên đăng nhập" onChange={handleChange} />
-                            <input type="email" className={style.input} name="email" placeholder="Địa chỉ email" onChange={handleChange} />
-                            <input type="tel" className={style.input} name="phone" placeholder="Số điện thoại" onChange={handleChange} />
-                            <input type="text" className={style.input} name="address" placeholder="Địa chỉ" onChange={handleChange} />
-
-                            <div className="mb-24">
-                                <label className="text-neutral-900 text-lg mb-8 fw-medium">Giới tính</label>
-                                <div className="d-flex gap-24">
-                                    <label><input type="radio" name="gender" value="Male" onChange={handleChange} /> Nam</label>
-                                    <label><input type="radio" name="gender" value="Female" onChange={handleChange} /> Nữ</label>
-                                    <label><input type="radio" name="gender" value="Other" onChange={handleChange} /> Khác</label>
-                                </div>
-                            </div>
-
-                            {/* Mật khẩu */}
-                            <div className="mb-24">
-                                <label className="text-neutral-900 text-lg mb-8 fw-medium">
-                                    Mật khẩu <span className="text-danger">*</span>
-                                </label>
-                                <input type="password" className={style.input} name="password" placeholder="Nhập mật khẩu" onChange={handleChange} />
-                                {passwordError && <p className="text-danger mt-2">{passwordError}</p>}
-                            </div>
-
-                            <p className="text-gray-500">
-                                Thông tin cá nhân của bạn sẽ được sử dụng theo <Link to="#" className={style.link}>chính sách bảo mật</Link>.
-                            </p>
-
-                            <button type="submit" className={style.button}>Đăng Ký</button>
-                        </div>
-                    </form>
+                    <div className="w-100 d-flex justify-content-center mt-3">
+                        <a href="/register" onClick={handleRegisterClick} className="text-main-600 text-decoration-underline" style={{ cursor: 'pointer', fontWeight: 500 }}>
+                            tạo tài khoản mới
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

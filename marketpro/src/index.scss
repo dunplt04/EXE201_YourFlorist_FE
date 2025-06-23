@@ -4,3 +4,8 @@
 @import "slick-carousel/slick/slick-theme.css";
 @import 'select2/dist/css/select2.min.css';
 @import "/public/assets/sass/main.scss";
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}

@@ -3,12 +3,11 @@ import Preloader from "../helper/Preloader";
 import HeaderOne from "../components/HeaderOne";
 
 import Breadcrumb from "../components/Breadcrumb";
-import FooterTwo from "../components/FooterTwo";
-import BottomFooter from "../components/BottomFooter";
-import ShippingOne from "../components/ShippingOne";
 import Login from "../components/Login";
+import Register from '../components/Register';
 import ScrollToTop from "react-scroll-to-top";
 import ColorInit from "../helper/ColorInit";
+import { Routes, Route } from 'react-router-dom';
 
 
 const AccountPage = () => {
@@ -39,13 +38,13 @@ const AccountPage = () => {
       <Login />
 
       {/* ShippingOne */}
-      <ShippingOne />
+      {/* <ShippingOne /> */}
 
       {/* FooterTwo */}
-      <FooterTwo />
+      {/* <FooterTwo /> */}
 
       {/* BottomFooter */}
-      <BottomFooter />
+      {/* <BottomFooter /> */}
 
 
     </>
